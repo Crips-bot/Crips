@@ -1,0 +1,13 @@
+{
+  "name": "crispiansworld",
+  "version": "1.0.0",
+  "description": "Static site for CrispiansWorld",
+  "scripts": {
+    "start": "http-server . -p 8000",
+    "dev": "http-server . -p 8000 -c-1"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "license": "MIT"
+}

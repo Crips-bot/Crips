@@ -1,0 +1,58 @@
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+:root {
+    --bg-black: #050505;
+    --solana-green: #14f195;
+    --solana-purple: #9945ff;
+    --neon-red: #ff3131;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-black);
+    font-family: 'Inter', sans-serif;
+}
+
+.gold-ticker-container {
+    width: 100%;
+    overflow: hidden;
+    background: #111;
+    border-bottom: 1px solid #222;
+    padding: 10px 0;
+}
+
+.ticker-track {
+    display: flex;
+    width: max-content; /* Critical: keeps items in one long line */
+    animation: scroll-alpha 40s linear infinite;
+}
+
+.ticker-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 40px;
+    color: white;
+    font-size: 0.9rem;
+    border-right: 1px solid #333;
+}
+
+.ticker-item span {
+    font-weight: 800;
+    color: var(--solana-purple);
+}
+
+.up { color: var(--solana-green); }
+.down { color: var(--neon-red); }
+
+/* The Infinite Animation */
+@keyframes scroll-alpha {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Resets halfway for a seamless loop */
+}
+
+/* Stops the ticker when you hover over it to read a price */
+.gold-ticker-container:hover .ticker-track {
+    animation-play-state: paused;
+}
